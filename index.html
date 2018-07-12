@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiran Joshi</title>
+	
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+	  	<div class="container-fluid">
+		  	<div class="row">
+		  		<div class="col-lg-10 col-lg-offset-1 navbar-header vd-navbar">
+		  			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>                        
+				    </button>
+		  			<div class="collapse navbar-collapse" id="myNavbar">
+		  			<a class="navbar-brand" href="#">logo</a>
+		  			<form class="navbar-form navbar-left" action="/action_page.php">
+      					<div class="form-group">
+        					<input type="text" placeholder="Search" class="vd-searchBox">
+      					</div>
+    				</form>
+
+		  			<ul class="nav navbar-nav">
+				      <li class="active"><a href="#">Pull requests</a></li>
+				      <li><a href="#">Issues</a></li>
+				      <li><a href="#">Marketplace</a></li>
+				      <li><a href="#">Explore</a></li>
+				    </ul>
+		  		</div>	
+		  	</div>
+	  	</div>
+	  	</div>
+	</nav>
+	<!-- Body -->
+	<div class="container-fluid vd-container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+				<div class="row vd-content">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vd-leftPanel mobileView" id="userContent">
+						<!-- Left Panel data -->
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 vd-subheader">
+						<ul class="list-inline vd-ul">
+							<li class="list">Overview</li>
+							<li class="list"><strong>Repositories</strong> <span>11</span></li>
+							<li class="list">Stars <span>5</span></li>
+							<li class="list">Followers <span>2</span></li>
+							<li class="list">Followings <span>2</span></li>
+						</ul>
+						<form>
+	      					<div class="form-group vd-searchFilters">
+	        					<input type="text" id="repository" onkeyup="searchRepo()" placeholder="Search repositories..." class="form-control" />
+	        					<select id="repoType" onclick="filterRepo()">
+	        						<option>Type: <b>All</b></option>
+	        						<option>Public</option>
+	        						<option>Private</option>
+	        						<option>Sources</option>
+	        					</select>
+	        					<select>
+	        						<option>Language: <b>All</b></option>
+	        						<option>CSS</option>
+	        						<option>Javascript</option>
+	        					</select>
+	        					<button>New</button>
+	      					</div>
+	      					<hr>
+						</form>
+						<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 vd-repos" id="selectedRepo"> 	
+							<!-- Right Panel data -->
+						</ul>
+					</div>	
+				</div>			
+			</div>
+		</div>	
+	</div>
+	<script type="text/javascript" src="js/apiAjax.js"></script>
+</body>
+</html>
